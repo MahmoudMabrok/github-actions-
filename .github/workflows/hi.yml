@@ -1,6 +1,9 @@
 name: hello 
 
-on: push 
+on: 
+   push: 
+     branches: ["main"]
+     paths: '**.md'
 
 jobs: 
   hello: 
