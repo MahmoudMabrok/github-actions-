@@ -16,3 +16,5 @@ jobs:
     steps: 
       - name: hello 
         run: echo "hello ${{ env.NAME1 }} $NAME1"
+      - name: print secret 
+        run: echo " ${{ secrets.API }}"
