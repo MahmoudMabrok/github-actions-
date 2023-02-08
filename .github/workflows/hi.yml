@@ -3,10 +3,15 @@ name: hello
 on: 
    push: 
    workflow_dispatch:
+   
+env: 
+   NAME: Ahmed
 
 jobs: 
   hello: 
     runs-on: ubuntu-latest
     steps: 
+      - name: print 
+        run: echo "name $NAME"
       - name: print secret 
         run: echo " ${{ secrets.API }}"
