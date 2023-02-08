@@ -1,20 +1,12 @@
 name: hello 
 
-env: 
-   NAME1: 'workflow'
-
-
 on: 
    push: 
    workflow_dispatch:
 
 jobs: 
   hello: 
-    env: 
-      NAME: 'build'
-    runs-on: ubuntue-latest
+    runs-on: ubuntu-latest
     steps: 
-      - name: hello 
-        run: echo "hello ${{ env.NAME1 }} $NAME1"
       - name: print secret 
         run: echo " ${{ secrets.API }}"
